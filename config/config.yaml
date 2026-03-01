@@ -215,7 +215,7 @@ display:
     ai_analysis: true # AI 分析区域
   standalone:
     platforms: ["zhihu","cankaoxiaoxi","zaobao"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["ZHJX","eeco-toutiao","bbc-chinese"] # RSS 源 ID 列表（如 ["hacker-news"]）
+    rss_feeds: ["ZHJX","ft-chinese","bbc-chinese"] # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 10                     # 每个源最多展示条数（0=不限制）
 
 
