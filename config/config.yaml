@@ -144,11 +144,11 @@ rss:
       enabled: false
      
      
-     - id: "jiandan"
+    - id: "jiandan"
       name: "煎蛋"
       url: "http://jandan.net/feed"
       max_age_days: 7
-      enabled: false     
+      enabled: true    
 
 
 
