@@ -129,15 +129,7 @@ rss:
       max_age_days: 7
 
 
-    - id: "ZHJX"
-      name: "知乎每日精选"
-      url: "https://www.zhihu.com/rss/daily"
-      max_age_days: 7
 
-    - id: "jandan"
-      name: "煎蛋"
-      url: "http://jandan.net/feed"
-      max_age_days: 7  
       
     - id: "zhihu-daily"
       name: "知乎日报"
@@ -146,17 +138,9 @@ rss:
       enabled: true
 
       
-    - id: "zhsc"
-      name: "知乎收藏精选"
-      url: "https://www.zhihu.com/rss/collection/top"
-      max_age_days: 7
-      enabled: true
 
-    - id: "jslht"
-      name: "集思录话题"
-      url: "https://rsshub.app/jisilu/topic"
-      max_age_days: 7
-      enabled: true
+
+
 
       
 
@@ -241,7 +225,15 @@ display:
 
 
   standalone:
-    platforms: ["zhihu","cankaoxiaoxi","zaobao"]  # 热榜平台 ID 列表（完全不变）
+    platforms: 
+      - id: "zhihu"
+        max_items: 20
+      - id: "cankaoxiaoxi"
+        max_items: 5
+      - id: "zaobao"
+        max_items: 6
+
+        
     rss_feeds:  # 改成带参数的格式
         - id: "ZHJX"
           max_items: 10
