@@ -73,7 +73,6 @@ platforms:
       name: "参考消息"
     - id: "zaobao"
       name: "联合早报"
-
     - id: "douban"
       name: "豆瓣话题"
 
@@ -245,24 +244,17 @@ display:
         max_items: 6
 
         
-    rss_feeds:  # 改成带参数的格式
-
-          
+    rss_feeds:  # 改成带参数的格式          
       - id: "ft-chinese"
-        max_items: 5
-          
+        max_items: 5          
       - id: "bbc-chinese"
-        max_items: 5
-          
+        max_items: 5          
       - id: "zhihu-daily"
         max_items: 10
-
       - id: "eeco-toutiao"
         max_items: 5
-
       - id: "zhihuxiangfa"
         max_items: 10
-
     max_items: 10  # 全局默认值（当某个 RSS 源没单独设置时使用）
 
 
