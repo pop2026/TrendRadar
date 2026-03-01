@@ -110,50 +110,28 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-
-
     - id: "eeco-toutiao"
       name: "经济观察网 - 今日头条"
       url: "http://www.eeo.com.cn/sypd/jrtt/rss.xml"
       max_age_days: 7
-
     - id: "bbc-chinese"
       name: "BBC中文网"
       url: "https://www.bbc.com/zhongwen/simp/index.xml"
       max_age_days: 7
-
     - id: "ft-chinese"
       name: "FT中文网"
       url: "https://www.ftchinese.com/rss/news"
       max_age_days: 7
-
-
-
-      
     - id: "zhihu-daily"
       name: "知乎日报"
       url: "https://rss.injahow.cn/zhihu/daily"
       max_age_days: 7
-      enabled: true
-      
+      enabled: true      
     - id: "zhihuxiangfa"
       name: "知乎日报想法热榜"
       url: "https://rss.aishort.top/?type=zhihu"
       max_age_days: 7
       enabled: false
-     
-     
-    - id: "jiandan"
-      name: "煎蛋"
-      url: "http://jandan.net/feed"
-      max_age_days: 7
-      enabled: true    
-
-
-
-
-      
-
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
@@ -232,8 +210,6 @@ display:
  #   platforms: ["zhihu","cankaoxiaoxi","zaobao"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
 #    rss_feeds: ["ft-chinese","bbc-chinese","zhihu-daily","eeco-toutiao","zhihuxiangfa"] # RSS 源 ID 列表（如 ["hacker-news"]）
 #    max_items: 10                     # 每个源最多展示条数（0=不限制）
-
-
   standalone:
     platforms: 
       - id: "zhihu"
@@ -241,9 +217,7 @@ display:
       - id: "cankaoxiaoxi"
         max_items: 5
       - id: "zaobao"
-        max_items: 6
-
-        
+        max_items: 6        
     rss_feeds:  # 改成带参数的格式          
       - id: "ft-chinese"
         max_items: 5          
