@@ -142,7 +142,13 @@ rss:
       url: "https://i.scnu.edu.cn/sub/zhihu/daily"
       max_age_days: 7
       enabled: false
-      
+     
+     
+     - id: "jiandan"
+      name: "煎蛋"
+      url: "http://jandan.net/feed"
+      max_age_days: 7
+      enabled: false     
 
 
 
@@ -225,7 +231,7 @@ display:
     ai_analysis: true # AI 分析区域
 #  standalone:
  #   platforms: ["zhihu","cankaoxiaoxi","zaobao"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-#    rss_feeds: ["ft-chinese","bbc-chinese","zhihu-daily","eeco-toutiao"] # RSS 源 ID 列表（如 ["hacker-news"]）
+#    rss_feeds: ["ft-chinese","bbc-chinese","zhihu-daily","eeco-toutiao","jiandan"] # RSS 源 ID 列表（如 ["hacker-news"]）
 #    max_items: 10                     # 每个源最多展示条数（0=不限制）
 
 
@@ -253,6 +259,9 @@ display:
 
         - id: "eeco-toutiao"
           max_items: 5
+
+        - id: "jiandan"
+          max_items: 10
 
     max_items: 10  # 全局默认值（当某个 RSS 源没单独设置时使用）
 
