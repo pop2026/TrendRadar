@@ -73,12 +73,10 @@ platforms:
       name: "参考消息"
     - id: "zaobao"
       name: "联合早报"
-    - id: "caixin"
-      name: "财新网"
+
     - id: "douban"
       name: "豆瓣话题"
-    - id: "nikkei"
-      name: "日经中文"
+
 
 # ===============================================================
 # 3. 数据源 - RSS 订阅
@@ -136,8 +134,31 @@ rss:
       url: "https://www.zhihu.com/rss/daily"
       max_age_days: 7
 
+    - id: "jandan"
+      name: "煎蛋"
+      url: "http://jandan.net/feed"
+      max_age_days: 7  
+      
+    - id: "zhihu-daily"
+      name: "知乎日报"
+      url: "https://www.zhihu.com/rss"
+      max_age_days: 7
+      enabled: true
 
+      
+    - id: "zhsc"
+      name: "知乎收藏精选"
+      url: "https://www.zhihu.com/rss/collection/top"
+      max_age_days: 7
+      enabled: true
 
+    - id: "jslht"
+      name: "集思录话题"
+      url: "https://rsshub.app/jisilu/topic"
+      max_age_days: 7
+      enabled: true
+
+      
 
     # 自定义源示例
     # - id: "custom-feed"
@@ -166,7 +187,7 @@ rss:
 #    • 适用场景：避免重复信息干扰
 # ===============================================================
 report:
-  mode: "current"                     # 可选: daily | current | incremental
+  mode: "incremental"                     # 可选: daily | current | incremental
                                       # ⚠️ 开启调度系统后，此值会被当前时间段的 report_mode 覆盖
 
 
@@ -213,10 +234,30 @@ display:
     rss: true # RSS 订阅区域
     standalone: true # 独立展示区（完整热榜/RSS，不受关键词过滤）
     ai_analysis: true # AI 分析区域
+#  standalone:
+ #   platforms: ["zhihu","cankaoxiaoxi","zaobao"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+#    rss_feeds: ["ZHJX","ft-chinese","bbc-chinese,zhihu-daily,zhsc，jslht"] # RSS 源 ID 列表（如 ["hacker-news"]）
+#    max_items: 10                     # 每个源最多展示条数（0=不限制）
+
+
   standalone:
-    platforms: ["zhihu","cankaoxiaoxi","zaobao"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["ZHJX","ft-chinese","bbc-chinese"] # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 10                     # 每个源最多展示条数（0=不限制）
+    platforms: ["zhihu","cankaoxiaoxi","zaobao"]  # 热榜平台 ID 列表（完全不变）
+    rss_feeds:  # 改成带参数的格式
+        - id: "ZHJX"
+          max_items: 10
+        - id: "ft-chinese"
+          max_items: 5
+        - id: "bbc-chinese"
+          max_items: 5
+        - id: "zhihu-daily"
+          max_items: 10
+        - id: "zhsc"
+          max_items: 10
+        - id: "jslht"
+          max_items: 10
+        - id: "jandan"
+          max_items: 10
+    max_items: 10  # 全局默认值（当某个 RSS 源没单独设置时使用）
 
 
 # ===============================================================
