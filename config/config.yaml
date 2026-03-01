@@ -73,8 +73,12 @@ platforms:
       name: "参考消息"
     - id: "zaobao"
       name: "联合早报"
-
-
+    - id: "caixin"
+      name: "财新网"
+    - id: "douban"
+      name: "豆瓣话题"
+    - id: "nikkei"
+      name: "日经中文"
 
 # ===============================================================
 # 3. 数据源 - RSS 订阅
@@ -109,10 +113,7 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-    - id: "yahoo-finance"
-      name: "雅虎财经"
-      url: "https://finance.yahoo.com/news/rssindex"
-      max_age_days: 7
+
 
     - id: "eeco-toutiao"
       name: "经济观察网 - 今日头条"
@@ -130,7 +131,10 @@ rss:
       max_age_days: 7
 
 
-
+    - id: "ZHJX"
+      name: "知乎每日精选"
+      url: "https://www.zhihu.com/rss/daily"
+      max_age_days: 7
 
 
 
@@ -211,8 +215,8 @@ display:
     ai_analysis: true # AI 分析区域
   standalone:
     platforms: ["zhihu","cankaoxiaoxi","zaobao"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["yahoo-finance","eeco-toutiao","bbc-chinese"] # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 6                     # 每个源最多展示条数（0=不限制）
+    rss_feeds: ["ZHJX","eeco-toutiao","bbc-chinese"] # RSS 源 ID 列表（如 ["hacker-news"]）
+    max_items: 10                     # 每个源最多展示条数（0=不限制）
 
 
 # ===============================================================
