@@ -137,9 +137,9 @@ rss:
       max_age_days: 7
       enabled: true
       
-    - id: "zhihu-daily-1"
-      name: "知乎日报-备用"
-      url: "https://i.scnu.edu.cn/sub/zhihu/daily"
+    - id: "zhihuxiangfa"
+      name: "知乎日报想法热榜"
+      url: "https://rss.aishort.top/?type=zhihu"
       max_age_days: 7
       enabled: false
      
@@ -231,7 +231,7 @@ display:
     ai_analysis: true # AI 分析区域
 #  standalone:
  #   platforms: ["zhihu","cankaoxiaoxi","zaobao"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-#    rss_feeds: ["ft-chinese","bbc-chinese","zhihu-daily","eeco-toutiao","jiandan"] # RSS 源 ID 列表（如 ["hacker-news"]）
+#    rss_feeds: ["ft-chinese","bbc-chinese","zhihu-daily","eeco-toutiao","zhihuxiangfa"] # RSS 源 ID 列表（如 ["hacker-news"]）
 #    max_items: 10                     # 每个源最多展示条数（0=不限制）
 
 
@@ -248,20 +248,20 @@ display:
     rss_feeds:  # 改成带参数的格式
 
           
-        - id: "ft-chinese"
-          max_items: 5
+      - id: "ft-chinese"
+        max_items: 5
           
-        - id: "bbc-chinese"
-          max_items: 5
+      - id: "bbc-chinese"
+        max_items: 5
           
-        - id: "zhihu-daily"
-          max_items: 10
+      - id: "zhihu-daily"
+        max_items: 10
 
-        - id: "eeco-toutiao"
-          max_items: 5
+      - id: "eeco-toutiao"
+        max_items: 5
 
-        - id: "jiandan"
-          max_items: 10
+      - id: "zhihuxiangfa"
+        max_items: 10
 
     max_items: 10  # 全局默认值（当某个 RSS 源没单独设置时使用）
 
