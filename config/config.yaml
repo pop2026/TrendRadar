@@ -61,8 +61,6 @@ platforms:
       name: "澎湃新闻"
     - id: "bilibili-hot-search"
       name: "bilibili 热搜"
-    - id: "cls-hot"
-      name: "财联社热门"
     - id: "ifeng"
       name: "凤凰网"
     - id: "weibo"
@@ -101,7 +99,7 @@ rss:
   freshness_filter:
     enabled: true                     # 是否启用新鲜度过滤（默认启用）
 
-    max_age_days: 10                  # 最大文章年龄（天）
+    max_age_days: 15                  # 最大文章年龄（天）
                                       # - 正整数：只推送 N 天内的文章
                                       # - 0：禁用过滤，推送所有文章
 
@@ -126,7 +124,7 @@ rss:
     - id: "zhihu-daily"
       name: "知乎日报"
       url: "https://rss.injahow.cn/zhihu/daily"
-      max_age_days: 7
+      max_age_days: 15
       enabled: true      
     - id: "zhihuxiangfa"
       name: "知乎日报想法热榜"
@@ -175,7 +173,7 @@ report:
 
   rank_threshold: 5                   # 排名高亮阈值
 
-  max_news_per_keyword: 0             # 每个关键词最大显示数量（0=不限制）
+  max_news_per_keyword: 3             # 每个关键词最大显示数量（0=不限制）
 
 
 # ===============================================================
@@ -208,9 +206,14 @@ display:
     standalone: true # 独立展示区（完整热榜/RSS，不受关键词过滤）
     ai_analysis: true # AI 分析区域
   standalone:
-    platforms: ["zhihu","cankaoxiaoxi","zaobao"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["zhihu-daily","zhihuxiangfa"] # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 10                     # 每个源最多展示条数（0=不限制）
+    platforms: 
+      zhihu: 20
+      cankaoxiaoxi: 5
+      zaobao: 5         # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    rss_feeds:
+      zhihu-daily: 20
+      eeco-toutiao: 5  # RSS 源 ID 列表（如 ["hacker-news"]）
+    #max_items: 10                     # 每个源最多展示条数（0=不限制）
 
 
 # ===============================================================
