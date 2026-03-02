@@ -73,6 +73,8 @@ platforms:
       name: "联合早报"
     - id: "douban"
       name: "豆瓣话题"
+    - id: "zhihu-daily"
+      name: "知乎日报"
 
 
 # ===============================================================
@@ -207,18 +209,15 @@ display:
     ai_analysis: true # AI 分析区域
   standalone:
     platforms: 
-      - id: zhihu
-        max_items: 10
-      - id: cankaoxiaoxi
-        max_items: 5
-      - id: zaobao
-        max_items: 5     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+      zhihu: 10
+      cankaoxiaoxi: 5
+      zaobao: 5
+      # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
     rss_feeds:
-      - id: zhihu-daily
-        max_items: 20
-      - id: eeco-toutiao
-        max_items: 5    # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 10                     # 每个源最多展示条数（0=不限制）
+      zhihu-daily: 20
+      eeco-toutiao: 5
+       # RSS 源 ID 列表（如 ["hacker-news"]）
+    #max_items: 10                     # 每个源最多展示条数（0=不限制）
 
 
 # ===============================================================
