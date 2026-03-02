@@ -73,8 +73,16 @@ platforms:
       name: "联合早报"
     - id: "douban"
       name: "豆瓣话题"
-    - id: "zhihu-daily"
-      name: "知乎日报"
+    - id: "toutiao"
+      name: "今日头条"
+    - id: "baidu"
+      name: "百度热搜"
+    - id: "tieba"
+      name: "贴吧"
+    - id: "douyin"
+      name: "抖音"
+      
+
 
 
 # ===============================================================
@@ -498,8 +506,8 @@ advanced:
   # 排序权重（用于重新排序不同平台的热搜）
   # 合起来等于 1
   weight:
-    rank: 0.6                         # 排名权重
-    frequency: 0.3                    # 频次权重
+    rank: 0.5                         # 排名权重
+    frequency: 0.4                    # 频次权重
     hotness: 0.1                      # 热度权重
 
   # 多账号限制
