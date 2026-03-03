@@ -183,7 +183,7 @@ report:
 
   rank_threshold: 5                   # 排名高亮阈值
 
-  max_news_per_keyword: 3             # 每个关键词最大显示数量（0=不限制）
+  max_news_per_keyword: 4             # 每个关键词最大显示数量（0=不限制）
 
 
 # ===============================================================
@@ -216,7 +216,7 @@ display:
     standalone: true # 独立展示区（完整热榜/RSS，不受关键词过滤）
     ai_analysis: true # AI 分析区域
   standalone:
-    platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    platforms: ["zhihu", "zaobao", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
     rss_feeds: ["zhihu-daily", "eeco-toutiao"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 15                     # 每个源最多展示条数（0=不限制）
 
