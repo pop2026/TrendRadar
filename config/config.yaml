@@ -120,7 +120,7 @@ rss:
   feeds:
     - id: "eeco-toutiao"
       name: "经济观察网 - 今日头条"
-      url: "http://www.eeo.com.cn/sypd/jrtt/rss.xml"
+      url: "http://www.eeo.com.cn/sypd/rss.xml"
       max_age_days: 7
       enabled: true
     - id: "bbc-chinese"
