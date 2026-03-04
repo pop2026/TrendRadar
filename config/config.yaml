@@ -219,7 +219,7 @@ display:
     standalone: true # 独立展示区（完整热榜/RSS，不受关键词过滤）
     ai_analysis: true # AI 分析区域
   standalone:
-    platforms: ["zhihu", "zaobao","gelonghui","chongbuluo-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    platforms: ["zhihu", "zaobao", "gelonghui", "chongbuluo-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
     rss_feeds: ["zhihu-daily", "bbc-chinese", "eeco"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 15                     # 每个源最多展示条数（0=不限制）
 
