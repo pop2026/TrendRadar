@@ -118,9 +118,9 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-    - id: "eeco-toutiao"
-      name: "经济观察网 - 今日头条"
-      url: "http://www.eeo.com.cn/sypd/rss.xml"
+    - id: "eeco"
+      name: "经济观察网"
+      url: "http://www.eeo.com.cn/finance/rss.xml"
       max_age_days: 7
       enabled: true
     - id: "bbc-chinese"
@@ -217,7 +217,7 @@ display:
     ai_analysis: true # AI 分析区域
   standalone:
     platforms: ["zhihu", "zaobao", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["zhihu-daily", "eeco-toutiao"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
+    rss_feeds: ["zhihu-daily", "eeco"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 15                     # 每个源最多展示条数（0=不限制）
 
 
