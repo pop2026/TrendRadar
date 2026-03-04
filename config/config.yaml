@@ -81,7 +81,10 @@ platforms:
       name: "贴吧"
     - id: "douyin"
       name: "抖音"
-      
+    - id: "gelonghui"
+      name: "格隆汇"
+    - id: "chongbuluo-hot"
+      name: "虫部落"    
 
 
 
