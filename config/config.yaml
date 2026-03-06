@@ -121,11 +121,6 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-    - id: "eeco"
-      name: "经济观察网"
-      url: "http://www.eeo.com.cn/finance/rss.xml"
-      max_age_days: 7
-      enabled: true
     - id: "bbc-chinese"
       name: "BBC中文网"
       url: "https://www.bbc.com/zhongwen/simp/index.xml"
@@ -171,7 +166,7 @@ rss:
 #    • 适用场景：避免重复信息干扰
 # ===============================================================
 report:
-  mode: "current"                     # 可选: daily | current | incremental
+  mode: "incremental"                     # 可选: daily | current | incremental
                                       # ⚠️ 开启调度系统后，此值会被当前时间段的 report_mode 覆盖
 
 
@@ -219,8 +214,8 @@ display:
     standalone: true # 独立展示区（完整热榜/RSS，不受关键词过滤）
     ai_analysis: true # AI 分析区域
   standalone:
-    platforms: ["zhihu", "zaobao", "gelonghui", "chongbuluo-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["zhihu-daily", "bbc-chinese"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
+    platforms: ["zhihu", "zaobao", "chongbuluo-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    rss_feeds: ["zhihu-daily", "ft-chinese", "bbc-chinese"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 15                     # 每个源最多展示条数（0=不限制）
 
 
